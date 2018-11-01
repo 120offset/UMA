@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="21ec44bfb8c543608a6d48a7b703d2ae" Name="Diagram1">
+        <EntityTypeShape EntityType="UMAModel.Location" Width="1.5" PointX="2.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMAModel.Material" Width="1.5" PointX="4.875" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMAModel.Project" Width="1.5" PointX="6.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMAModel.sysdiagram" Width="1.5" PointX="12" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMAModel.User" Width="1.5" PointX="8.125" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMAModel.Usertype" Width="1.5" PointX="4.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMAModel.ProjectUser" Width="1.5" PointX="9.875" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="UMAModel.FK_ProjectUsers_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="UMAModel.FK_ProjectUsers_User" ManuallyRouted="false" />
+        <AssociationConnector Association="UMAModel.FK_User_Usertype" ManuallyRouted="false" />
+        <AssociationConnector Association="UMAModel.LocationMaterials" ManuallyRouted="false" />
+        <AssociationConnector Association="UMAModel.ProjectLocations" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
