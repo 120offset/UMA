@@ -161,13 +161,13 @@ namespace UMASite.Controllers
         {
             if (ModelState.IsValid)
             {
-                string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+                string CS = ConfigurationManager.ConnectionStrings["UMADB"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd = new SqlCommand("spAddNewLocation", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     con.Open();
-                    cmd.Parameters.AddWithValue("@CityName", location.Tag);
+                    cmd.Parameters.AddWithValue("@Tag", location.Tag);
                     cmd.Parameters.AddWithValue("@Latitude", location.Latitude);
                     cmd.Parameters.AddWithValue("@Longitude", location.Longitude);
                     cmd.Parameters.AddWithValue("@Description", location.Description);

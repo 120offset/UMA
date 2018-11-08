@@ -20,7 +20,7 @@ namespace UMASite.Controllers
         public ActionResult Location()
         {
             string markers = "[";
-            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            string CS = ConfigurationManager.ConnectionStrings["UMADB"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
                 SqlCommand cmd = new SqlCommand("spGetMap", con);
@@ -46,7 +46,7 @@ namespace UMASite.Controllers
         {
             if (ModelState.IsValid)
             {
-                string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+                string CS = ConfigurationManager.ConnectionStrings["UMADB"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd = new SqlCommand("spAddNewLocation", con);
@@ -65,21 +65,5 @@ namespace UMASite.Controllers
             }
             return RedirectToAction("Location");
         }
-
-
-
-        //public ActionResult About()
-        //{
-        //    ViewBag.Message = "Your application description page.";
-
-        //    return View();
-        //}
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
     }
 }
